@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mcTek</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo"><i class="fa-solid fa-house"></i></a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link active">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div style="display:flex; align-items:center; gap: 0.5rem;">
+                <button class="theme-toggle" aria-label="Toggle dark mode" id="themeToggle">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="navToggleBtn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h1>Hi, I'm <span>Chisomo Mbulo</span></h1>
+                <p>I'm a computer Science student at the University of Zambia 
+                ,I am dedicated to learning and growing in technology as a software engineer.
+                 I have a great passion for technology and enjoy exploring new ideas
+                  that can help me achieve my goals in tech industry. One of my 
+                  main goals is to come up with innovative projects that will help solve problems
+                  in our surroundings and country at large .         	
+ </p>
+                <div>
+                    <a href="#contact" class="btn">Get in Touch</a>
+                    <a href="#experience" class="btn btn-outline">View Work</a>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="profile-img">
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title fade-in">Experience</h2>
+        <p class="section-subtitle fade-in">My professional journey is yet to start but
+             I am excited for the opportunities ahead.</p>
+
+             <p class="section-subtitle fade-in">
+                I am currently seeking internship opportunities to gain practical experience
+                 and contribute to real-world problems. I am eager to apply my skills in web 
+                 development, problem-solving, and collaboration to make a meaningful impact 
+                 in the world.</p>
+                <div class="timeline-tags">
+                    <span class="tag">Javascript</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">Git/Github</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Java</span>
+                </div>
+        
+    </section>
+
+    
+    <section id="education">
+        <h2 class="section-title fade-in">Education</h2>
+        <p class="section-subtitle fade-in">My academic background and continuous learning journey.</p>
+       
+            <div class="education-card">
+                <div class="education-icon">📚</div>
+                <h3 class="education-degree">B.S. in Computer Science</h3>
+                <div class="education-school">University of Zambia, Lusaka</div>
+                <div class="education-year">2025 — now</div>
+                <p class="education-desc">Relevant coursework :: Data Structures, Algorithms, Web Development, Database Systems.</p>
+            </div>
+            
+             
+        <div class="education-grid fade-in">
+            <div class="education-card">
+                <div class="education-icon">🎓</div>
+                <h3 class="education-degree">School Certificate</h3>
+                <div class="education-school">Chadiza Boarding Secondary School</div>
+                <div class="education-year">2021 — 2023</div>
+                <p class="education-desc">Specialized in Science, Mathematics, Geography,
+                     Civic education, Religious Education, English Language and Agric Science. </p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="contact">
+       
+<div class="contact-card">
+  <h2>Get In Touch</h2>
+ 
+  <div class="info-block">
+    <label>Email</label>
+    <span>chisomombulo34@gmail.com</span>
+  </div>
+ 
+  <div class="info-block">
+    <label>Phone / WhatsApp</label>
+    <span>+260 976072217</span>
+  </div>
+ 
+  <div class="info-block">
+    <label>Location</label>
+    <span>Lusaka, Zambia</span>
+  </div>
+ 
+  <form id="contactForm">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+ 
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required>
+ 
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+ 
+    <button type="submit">Send Message</button>
+    <div class="status" id="status"></div>
+  </form>
+</div>
+        
+        <div class="social-links fade-in">
+            <a href="https://www.instagram.com/chisomo.em?stkn=MTNleTF2OTloM2pkYw==" class="social-link" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/chisomo-mbulo-5b3074415" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://x.com/Chisomo34" class="social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p> © 2026 Chisomo Mbulo. All rights reserved.</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
